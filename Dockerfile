@@ -22,7 +22,7 @@ RUN export TESTLEVEL=RunLocalTests
 #Create sfdx directory
 RUN mkdir sfdx
 #Install Salesforce CLI
-RUN wget -qO- ${CLIURL} | tar xJ -C sfdx --strip-components 1
+RUN wget -qO- "https://developer.salesforce.com/media/salesforce-cli/sfdx-linux-amd64.tar.xz" | tar xJ -C sfdx --strip-components 1
 RUN ./sfdx/install
 RUN export PATH=./sfdx/$(pwd):$PATH
 RUN sfdx --version
