@@ -27,5 +27,3 @@ RUN ./sfdx/install
 RUN export PATH=./sfdx/$(pwd):$PATH
 RUN sfdx --version
 RUN sfdx plugins --core
-#Install JSON processor
-RUN apt-get install -y jq
