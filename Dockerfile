@@ -20,7 +20,7 @@ RUN export PATH=./sfdx/$(pwd):$PATH
 RUN sfdx --version
 RUN sfdx plugins --core
 
-# install git
-RUN apt-get update \
-    apt-get upgrade \
-    apt-get install git
+#Install git
+RUN apt-get update && \
+    apt-get upgrade -y && \
+    apt-get install -y git
